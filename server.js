@@ -23,7 +23,21 @@ mongoose.connect(
   }
 );
 
+var db = require("./models");
+
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+});
+
+app.get("/profile/:id", function(req, res) {
+  db.User.findOne({_id: req.params.id })
+  .populate("interests")
+  .populate("userName")
+  .then(function(dbUser) {
+    res.json(dbUser);
+  })
+  .catch(function(err) {
+   res.json(err); 
+  })
 });

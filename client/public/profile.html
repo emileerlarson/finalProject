@@ -40,7 +40,7 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-                    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#myModal" title="Edit">
+                    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#myModal" title="Edit" style="margin: 5px">
                             Samantha Jane Doe
                     </button>
                         <!-- The Modal -->
@@ -65,7 +65,12 @@
                                     <label for="pwd">Email:</label>
                                     <input type="password" class="form-control" id="email">
                                   </div>
-                                  <button type="submit" class="btn btn-primary">Submit</button>
+                                  <div>
+                                    <label for="pictures">Pictures:</label>
+                                    <input placeholder="Change your Picture" type="text" class="form-control" id="picture">
+                                  </div>
+                                  <br>
+                                  <button type="submit" class="btn btn-warning">Submit</button>
                               </form>
                             </div>
                             
@@ -77,6 +82,7 @@
                           </div>
                         </div>
                         </div>
+                    <br>    
                     <img src="https://www.istockphoto.com/resources/images/PhotoFTLP/img_63351521.jpg" class="rounded-circle img-fluid" alt="Cinque Terre">
                 </div>
             </div>
@@ -109,21 +115,28 @@
                         <label><input type="radio" name="pet">Pets</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="culter">Culture</label>
+                        <label><input type="radio" name="culture">Culture</label>
                     </div>                    
                     <div class="radio">
                         <label><input type="radio" name="business">Business</label>
                     </div>     
                     <div class="radio">
-                        <label><input type="radio" name="business">Family</label>
+                        <label><input type="radio" name="family">Family</label>
                     </div>                                    
                     <div class="radio">
-                        <label><input type="radio" name="business">Social</label>
+                        <label><input type="radio" name="social">Social</label>
                     </div> 
                     <div class="radio">
-                        <label><input type="radio" name="business">Food/Drink</label>
+                        <label><input type="radio" name="food-drink">Food/Drink</label>
                     </div>                     
                 </div>
+            </div>                   
+            <div class="row" style="padding-top: 20px">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                   <button type="button" class="btn btn-warning disabled">Warning</button> 
+                </div>
+                <div class="col-md-5"></div>                
             </div>
         </div>
     </div>
