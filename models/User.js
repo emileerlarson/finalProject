@@ -13,6 +13,11 @@ var UserSchema = new Schema({
         required: true
     },
 
+    password: {
+        type: String,
+        required: true
+    },
+
     interests: {
         type: Array
     }
