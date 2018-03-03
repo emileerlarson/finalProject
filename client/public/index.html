@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -19,10 +20,11 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
 
+    
   </head>
 
   <body id="page-top">
@@ -64,10 +66,10 @@
               <a class="nav-link js-scroll-trigger" href="#team">Team</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact"><strong>Sign Up</strong></a>
+              <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#signUpModal" id="navSignUp"><strong>Sign Up</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle="dropdown" id="navLogin"><strong>Login</strong></a>
+              <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#loginModal" id="navLogin"><strong>Login</strong></a>
             </li>
           </ul>
         </div>
@@ -120,8 +122,8 @@
             <p class="text-muted">Activities and events that meet your interests will display first. </p>
           </div>
 
-          <div class="col-md-12 text-center" id="bg-signup" >
-            <a class="btn btn-success btn-xl text-uppercase js-scroll-trigger" href="#contact">Sign Me Up!</a>
+          <div class="col-md-12 text-center" data-toggle="modal" data-target="#signUpModal" id="navSignUp" id="bg-signup" >
+            <a class="btn btn-success btn-xl text-uppercase js-scroll-trigger" href="#">Sign Me Up!</a>
           </div>
         </div>
       </div>
@@ -211,10 +213,71 @@
       </div>
     </footer>
 
-    <!-- Portfolio Modals -->
+    <!-- Modals -->
 
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- header -->
+          <div class="modal-header">
+            <h3 class="modal-title">Login Form</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+          </div>
+          <!-- body -->
+          <div class="modal-header container">
+            <form role="form">
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email"/>
+                <input type="password" class="form-control" id="pwd" placeholder="Password" />
+              </div>
+            </form>
+          </div>
+          <!-- footer -->
+          <div class="modal-footer">
+            <button class="btn btn-success btn-block">Log In</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Modal signup -->
+  <div class="modal fade" id="signUpModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- header -->
+        <div class="modal-header">
+          <h3 class="modal-title">Sign Up</h3>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <!-- body -->
+        <div class="modal-header container">
+          <form role="form">
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Email"/>
+              <input type="password" class="form-control" id="pwd" placeholder="Password" />
+              <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+            </div>
+          </form>
+        </div>
+        <!-- footer -->
+        <div class="modal-footer">
+          <button class="btn btn-success btn-block">Sign Up</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+    <!-- <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -227,7 +290,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <!-- <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
@@ -245,7 +308,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --> 
 
     <!-- Modal 2 -->
     <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
