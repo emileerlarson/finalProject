@@ -38,3 +38,17 @@ h1
 	color: #212529;
 }
 
+#jumbo{
+  background: white;
+  border: 2px solid #fed136;
+  margin: 20px;
+}
+
+.form-group{
+  margin-bottom: 20px;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+

@@ -20,6 +20,10 @@
 
     <!-- Custom styles for this template -->
     <link href="css/profile.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -48,8 +52,8 @@
 
 <header class="profile">
     <div class="container">
-        <div class="jumbotron">
-            <div class="row" style="background: gray; padding: 10px">
+        <div class="jumbotron" id="jumbo">
+            <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
@@ -71,16 +75,26 @@
                             <div class="modal-body">
                               <form action="/action_page.php">
                                   <div class="form-group">
-                                    <label for="email">Name:</label>
-                                    <input type="email" class="form-control" id="name">
+                                    <label for="name">Name:</label>
+                                    <input type="name" class="form-control" id="name">
                                   </div>
                                   <div class="form-group">
-                                    <label for="pwd">Email:</label>
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="pwd">Password:</label>
                                     <input type="password" class="form-control" id="email">
                                   </div>
-                                  <div>
-                                    <label for="pictures">Pictures:</label>
-                                    <input placeholder="Change your Picture" type="text" class="form-control" id="picture">
+                                  <div class="form-group">
+                                    <!-- Button to access locals picture files --> 
+                                    <label class="file-upload-container" for="file-upload">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Picture_icon_BLACK.svg/2000px-Picture_icon_BLACK.svg.png" id="img-preview" style="hight: 20px; width: 20px;"/>
+                                    <input id="file-upload" type="file" style="display:none;">
+                                        Upload an Image
+                                    </label>
+                                    <!-- ===============================-->
+                                    <input placeholder="Upload a Picture of your Event" type="text" class="form-control" id="picture">
                                   </div>
                                   <br>
                                   <button type="submit" class="btn btn-warning">Submit</button>
@@ -105,7 +119,7 @@
 
 <div class="interests">
     <div class="container">
-        <div class="jumbotron">
+        <div class="jumbotron" id="jumbo">
             <h1>What Type of Events are you Interested in?</h1>
             <div class="row">
                 <div class="col-md-6" id="options">
@@ -159,7 +173,7 @@
         </div>
     </div>
 </div>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
