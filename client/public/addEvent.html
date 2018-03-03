@@ -7,6 +7,7 @@
         <title>Add Event</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/profile.css" rel="stylesheet">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -38,8 +39,8 @@
 </div>
 
 	<div class="container">
-		<div class="jumbotron">
-			<h2>Add an Event</h2>
+		<div class="jumbotron" id="jumbo">
+			<h1>Add an Event</h1>
 			<form action="/action_page.php">
 			  <div class="form-group">
 			    <label for="title">Event Title:</label>
@@ -63,9 +64,15 @@
 					<option value="Business">Business</option>					
 				</select>  		    
 			  </div>
-			  <div>
-			  	<label for="pictures">Pictures:</label>
-				<input placeholder="Upload a Picuter of your Event" type="text" class="form-control" id="picture">
+			  <div class="form-group">
+					<!-- Button to access locals picture files --> 
+					<label class="file-upload-container" for="file-upload">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Picture_icon_BLACK.svg/2000px-Picture_icon_BLACK.svg.png" id="img-preview" style="hight: 20px; width: 20px;"/>
+					<input id="file-upload" type="file" style="display:none;">
+						Upload an Image
+					</label>
+					<!-- ===============================-->
+			    <input placeholder="Upload a Picture of your Event" type="text" class="form-control" id="picture">
 			  </div>
 			  <div class="form-group">
 			    <label for="date">Date:</label>
@@ -101,5 +108,7 @@
 		</div>
 	</div>
 </body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </html>
