@@ -26,7 +26,7 @@
                     </li> 
                     <br> 
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="home.html">Home</a>
+                        <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
                     </li>
                     <br>
                     <li class="nav-item">
@@ -48,7 +48,7 @@
 			  </div>
 			  <div class="form-group">
 			    <label for="list">Category:</label>
-			    <select class="form-control" id="list">
+			    <select class="form-control" id="category">
 			    	<option value="placeholder"></option>
 					<option value="OutDoor">OutDoor</option>
 					<option value="Art">Art</option>
@@ -74,29 +74,46 @@
 					<!-- ===============================-->
 			    <input placeholder="Upload a Picture of your Event" type="text" class="form-control" id="picture">
 			  </div>
-			  <div class="form-group">
-			    <label for="date">Date:</label>
-			    <input type="date" placeholder="02/27/2018" class="form-control" id="Date">
-			  </div>
-			  <div class="form-group">
-			    <label for="time">Time:</label>
-			    <input type="time" placeholder="12:30PM" class="form-control" id="Time">
+			  <div class="form-group" >
+			  	<div class="row">
+			  		<div class="col-sm-3">
+			    	<label for="month">Month:</label>
+			    	<input  placeholder="March" class="form-control" id="month" style="margin: 10px;">
+			    	</div>
+			    	<div class="col-sm-3">
+			    	<label for="day">Day:</label>
+			    	<input type="day" placeholder="21" class="form-control" id="day" style="margin: 10px;">
+			    	</div>
+			    	<div class="col-sm-3">
+			    	<label for="year">Year:</label>
+			    	<input type="year" placeholder="2018" class="form-control" id="year" style="margin: 10px;">
+			    	</div>
+			    	<div class="col-sm-3">
+			    	<label for="time">Time:</label>
+			    	<input type="time" placeholder="12:30PM" class="form-control" id="Time" style="margin: 10px;">
+			    	</div>
+			    </div>	
 			  </div>
 			  <div class="form-group">
 			    <label for="address">Address:</label>
 			    <input type="address" placeholder=" 300 N 500 W" class="form-control" id="Address">
 			  </div>
+
 			  <div class="form-group">
-			    <label for="city">City:</label>
-			    <input type="city" placeholder="SaltLake City" class="form-control" id="Cit">
-			  </div>	
-			  <div class="form-group">
-			    <label for="state">Sate:</label>
-			    <input type="state" placeholder="UT" class="form-control" id="Sate">
-			  </div>	
-			  <div class="form-group">
-			    <label for="zip">Zip Code:</label>
-			    <input type="zip" placeholder="84115" class="form-control" id="Zip">
+			  	<div class="row">
+			  		<div class="col-sm-4">
+					    <label for="city">City:</label>
+					    <input type="city" placeholder="SaltLake City" class="form-control" id="Cit">
+					 </div>	
+					  <div class="col-sm-4">
+					    <label for="state">Sate:</label>
+					    <input type="state" placeholder="UT" class="form-control" id="Sate">
+					  </div>	
+					  <div class="col-sm-4">
+					    <label for="zip">Zip Code:</label>
+					    <input type="zip" placeholder="84115" class="form-control" id="Zip">
+			  		  </div>
+			  	</div>
 			  </div>		  	  	  		  		  
 			  <div class="form-group">
 			    <label for="discription">Discription:</label>
