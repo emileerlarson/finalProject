@@ -42,7 +42,9 @@ h1
   background: white;
   border: 2px solid #fed136;
   margin: 20px;
+  position: relative;
 }
+
 
 .form-group{
   margin-bottom: 20px;
@@ -51,4 +53,26 @@ h1
   font-weight: 400;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
+#backgroundimg{
+  background-image: url("img/portfolio/02-profile.jpg");
+  height: 300px; 
+  width: 1030px;
+}
+#userpicture{
+  border:  5px solid #fed136;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+}
+#username{
+  text-align: center;
+  padding-top: 20px;
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+}
+h4{
+  font-size: 30px;
+  font-weight: 50;
+}

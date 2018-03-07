@@ -41,7 +41,7 @@
 	<div class="container">
 		<div class="jumbotron" id="jumbo">
 			<h1>Add an Event</h1>
-			<form action="/action_page.php">
+			<form action="/action_page.php" id="addEvent">
 			  <div class="form-group">
 			    <label for="title">Event Title:</label>
 			    <input type="title" placeholder="Event Title" class="form-control" id="title">
@@ -50,18 +50,18 @@
 			    <label for="list">Category:</label>
 			    <select class="form-control" id="category">
 			    	<option value="placeholder"></option>
-					<option value="OutDoor">OutDoor</option>
-					<option value="Art">Art</option>
-					<option value="Music">Music</option>
-					<option value="Famil">Family</option>
-					<option value="Food/Drink">Food/Drink</option>
-					<option value="Game/SiFi">Game/SiFi</option>
-					<option value="Education">Education</option>
-					<option value="Fitness">Fitness</option>
-					<option value="Pets">Pets</option>
-					<option value="Culture">Culture</option>
-					<option value="Social">Social</option>
-					<option value="Business">Business</option>					
+					<option value="outDoor">Outdoor</option>
+					<option value="art">Art</option>
+					<option value="music">Music</option>
+					<option value="family">Family</option>
+					<option value="foodDrink">Food/Drink</option>
+					<option value="gameSciFi">Game/SciFi</option>
+					<option value="education">Education</option>
+					<option value="fitness">Fitness</option>
+					<option value="pets">Pets</option>
+					<option value="culture">Culture</option>
+					<option value="social">Social</option>
+					<option value="business">Business</option>					
 				</select>  		    
 			  </div>
 			  <div class="form-group">
@@ -90,37 +90,37 @@
 			    	</div>
 			    	<div class="col-sm-3">
 			    	<label for="time">Time:</label>
-			    	<input type="time" placeholder="12:30PM" class="form-control" id="Time" style="margin: 10px;">
+			    	<input type="time" placeholder="12:30PM" class="form-control" id="time" style="margin: 10px;">
 			    	</div>
 			    </div>	
 			  </div>
 			  <div class="form-group">
 			    <label for="address">Address:</label>
-			    <input type="address" placeholder=" 300 N 500 W" class="form-control" id="Address">
+			    <input type="address" placeholder=" 300 N 500 W" class="form-control" id="address">
 			  </div>
 
 			  <div class="form-group">
 			  	<div class="row">
 			  		<div class="col-sm-4">
 					    <label for="city">City:</label>
-					    <input type="city" placeholder="SaltLake City" class="form-control" id="Cit">
+					    <input type="city" placeholder="SaltLake City" class="form-control" id="city">
 					 </div>	
 					  <div class="col-sm-4">
-					    <label for="state">Sate:</label>
-					    <input type="state" placeholder="UT" class="form-control" id="Sate">
+					    <label for="state">State:</label>
+					    <input type="state" placeholder="UT" class="form-control" id="state">
 					  </div>	
 					  <div class="col-sm-4">
 					    <label for="zip">Zip Code:</label>
-					    <input type="zip" placeholder="84115" class="form-control" id="Zip">
+					    <input type="zip" placeholder="84115" class="form-control" id="zip">
 			  		  </div>
 			  	</div>
 			  </div>		  	  	  		  		  
 			  <div class="form-group">
-			    <label for="discription">Discription:</label>
-			    <textarea type="discription" placeholder="discription" class="form-control" id="discription">
+			    <label for="description">Description:</label>
+			    <textarea type="description" placeholder="description" class="form-control" id="description">
 			    </textarea>
 			  </div>		  	
-			  <button type="submit" class="btn btn-warning">Submit</button>
+			  <button type="submit" class="btn btn-warning">Submit Event</button>
 			</form>
 		</div>
 	</div>

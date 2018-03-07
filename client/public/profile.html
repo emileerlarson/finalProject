@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Agency - Start Bootstrap Theme</title>
+    <title>Profile Page</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -54,65 +54,74 @@
     <div class="container">
         <div class="jumbotron" id="jumbo">
             <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#myModal" title="Edit" style="margin: 5px">
-                            Samantha Jane Doe
-                    </button>
-                        <!-- The Modal -->
+             <img id="backgroundimg" src="img/portfolio/02-profile.jpg" style="height: 300px; width: 1030px;">
+                <div id="username">
+                        <img id="userpicture" src="https://www.washingtonpost.com/wp-apps/imrs.php?src=https://s3.amazonaws.com/arc-authors/washpost/e2838923-cb36-49c3-976f-8a9cc279583b.png&w=180&h=180&t=20170517a" class="rounded-circle img-fluid" alt="Cinque Terre">
+                    <div>
+                        <h4 data-toggle="modal" data-target="#myModal" title="Edit">
+                                Samantha Jane Doe
+                                <br>
+                                Samanthadoe@gmail.com
+                        </h4>
+                    </div>
+                            <!-- The Modal -->
                         <div class="modal fade" id="myModal">
-                        <div class="modal-dialog modal-dialog-centered">
-                          <div class="modal-content">
-                          
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                              <h4 class="modal-title">Edit User Info</h4>
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <div class="modal-dialog modal-dialog-centered">
+                              <div class="modal-content">
+                              
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Edit User Info</h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  <form action="/action_page.php">
+                                      <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="name" class="form-control" id="name">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" id="email">
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input type="password" class="form-control" id="password">
+                                      </div>
+                                      <div class="form-group">
+                                        <!-- Button to access locals picture files --> 
+                                        <label class="file-upload-container" for="file-upload">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Picture_icon_BLACK.svg/2000px-Picture_icon_BLACK.svg.png" id="img-preview" style="hight: 20px; width: 20px;"/>
+                                        <input id="file-upload" type="file" style="display:none;">
+                                            Upload an Image
+                                        </label>
+                                        <!-- ===============================-->
+                                        <input placeholder="Upload a Picture of your Event" type="text" class="form-control" id="picture">
+                                      </div>
+                                      <br>
+                                      <button type="submit" class="btn btn-warning">Submit</button>
+                                  </form>
+                                </div>
+                                
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                                
+                              </div>
                             </div>
-                            
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                              <form action="/action_page.php">
-                                  <div class="form-group">
-                                    <label for="name">Name:</label>
-                                    <input type="name" class="form-control" id="name">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="email" class="form-control" id="email">
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="pwd">Password:</label>
-                                    <input type="password" class="form-control" id="email">
-                                  </div>
-                                  <div class="form-group">
-                                    <!-- Button to access locals picture files --> 
-                                    <label class="file-upload-container" for="file-upload">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Picture_icon_BLACK.svg/2000px-Picture_icon_BLACK.svg.png" id="img-preview" style="hight: 20px; width: 20px;"/>
-                                    <input id="file-upload" type="file" style="display:none;">
-                                        Upload an Image
-                                    </label>
-                                    <!-- ===============================-->
-                                    <input placeholder="Upload a Picture of your Event" type="text" class="form-control" id="picture">
-                                  </div>
-                                  <br>
-                                  <button type="submit" class="btn btn-warning">Submit</button>
-                              </form>
-                            </div>
-                            
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                            
-                          </div>
-                        </div>
-                        </div>
-                    <br>    
-                    <img src="https://www.istockphoto.com/resources/images/PhotoFTLP/img_63351521.jpg" class="rounded-circle img-fluid" alt="Cinque Terre">
-                </div>
+                        </div>   
+                </div>        
             </div>
+            <div class="row"><p></p></div>
+            <div class="row"><p></p></div>
+            <div class="row"><p></p></div>
+            <div class="row"><p></p></div>
+            <div class="row"><p></p></div>
+            <div class="row"><p></p></div>
+            <div class="row"><p></p></div>            
         </div>
     </div>
 </header>    
@@ -159,14 +168,14 @@
                         <label><input type="radio" name="social">Social</label>
                     </div> 
                     <div class="radio">
-                        <label><input type="radio" name="food-drink">Food/Drink</label>
+                        <label><input type="radio" name="foodDrink">Food/Drink</label>
                     </div>                     
                 </div>
             </div>                   
             <div class="row" style="padding-top: 20px">
                 <div class="col-md-5"></div>
                 <div class="col-md-2">
-                   <button type="button" class="btn btn-warning disabled">Warning</button> 
+                   <button type="button" class="btn btn-warning disabled">Save your Interests</button> 
                 </div>
                 <div class="col-md-5"></div>                
             </div>

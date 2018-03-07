@@ -34,3 +34,25 @@ fileUpload.addEventListener('change', function() {
         });
        
     });
+
+function getUser() {
+  $.get("/api/user").then(function(data) {
+    for (var i = 0; i < data.length; i++) {
+      renderUser(data[i]);
+    }
+  });
+};
+
+function renderUser(data) {
+  var userSection = $('<div clas"s="username"></div>');
+  var userPic = $('<img id="userpicture" class="rounded-circle img-fluid" src="' + data.picture + '"></img>');
+  var wraper = $('<div id="wrapModalItems"></div>');
+  var emailname = $('<h4 id="emailName" data-toggle="modal" data-target="#myModal" title="Edit">' + data.name + '<br>' + data.email + '</h4>');
+
+  var modalApp = wraper.append(emailname);
+
+  userSection.append(userPic, modalApp)
+  $('#username').append(userSection);
+}
+
+getUser();
