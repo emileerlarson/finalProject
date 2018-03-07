@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
-import Calendar from 'react-calendar/dist/entry.nostyle';
+import Calendar from 'react-calendar';
 
-class MyApp extends React.Component {
-
+class App extends Component {
   state = {
     date: new Date(),
-    minDetail: 'year',
   }
 
   onChange = date => this.setState({ date })
 
   render() {
-
-    const minDetail = this.state.minDetail;
-
     return (
       <div>
+        <h1>HEllO WORLD</h1>
         <Calendar
           onChange={this.onChange}
-          minDetail={minDetail}
           value={this.state.date}
         />
       </div>
     );
   }
 }
+
+export default App;
