@@ -1,28 +1,38 @@
-var mongoose = require("mongoose");
-
-var Schema = mongoose.Schema;
-
-var UserSchema = new Schema({
+module.exports = function (sequelize, DataTypes) {
+  var Users = sequelize.define("users", {
     name: {
-        type: String,
-        required: true
+      type: DataTypes.TEXT,
+      allowNull: false,
+      len: [1]
     },
-
     email: {
-        type: String,
-        required: true
+      type: DataTypes.TEXT,
+      allowNull: false,
+      len: [1]
     },
-
     password: {
-        type: String,
-        required: true
+      type: DataTypes.TEXT,
+      allowNull: false,
+      len: [1]
     },
-
-    interests: {
-        type: Array
+    picture: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+      len: [1]
     }
-})
+  });
 
-const User = mongoose.model("User", UserSchema);
+  //there are no assosiations yet so i commented this out
 
-module.exports = User;
+  // Users.associate = function (models) {
+  //   // We're saying that a Users should belong to an Author
+  //   // A Users can't be created without an Author due to the foreign key constraint
+  //   Users.belongsTo(models.<YOUR MODEL NAME>, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
+
+  return Users;
+};

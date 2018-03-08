@@ -228,12 +228,12 @@
           <div class="modal-body">
             <form action="/action_page.php">
               <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="name" class="form-control" id="name">
+                <label for="name">Email:</label>
+                <input type="name" class="form-control" id="lEmail">
               </div>
               <div class="form-group">
                 <label for="pwd">Password:</label>
-                <input type="password" class="form-control" id="email">
+                <input type="password" class="form-control" id="lPassword">
               </div>
 
               <br>
@@ -267,15 +267,15 @@
     <form action="/action_page.php">
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="name" class="form-control" id="name">
+        <input type="name" class="form-control" id="sName">
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email">
+        <input type="email" class="form-control" id="sEmail">
       </div>
       <div class="form-group">
         <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="email">
+        <input type="password" class="form-control" id="sPassword">
       </div>
       <div class="form-group">
       <!-- Button to access locals picture files --> 
@@ -288,7 +288,7 @@
         <input placeholder="Upload a Picture of your Event" type="text" class="form-control" id="picture">
       </div>
       <br>
-      <button type="submit" class="btn btn-warning">Submit</button>
+      <button id="signup" type="submit" class="btn btn-warning">Submit</button>
     </form>
   </div>
                             
@@ -517,6 +517,8 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+
+    <script src="js/landing.js"></script>
 
   </body>
 
