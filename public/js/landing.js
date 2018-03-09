@@ -50,5 +50,23 @@ $('#signup').on('click', function(event){
     picture: imgURL
   }
   console.log(user)
+  $.post("/api/signUp", user).then(function(res){
+    console.log(res);
+    window.location.pathname = "profile";
+  })
+})  
 
+$('#login').on('click', function (event) {
+  event.preventDefault();
+  var email = $('#lEmail').val()
+  var password = $('#lPassword').val()
+  var user = {
+    email,
+    password,
+  }
+  console.log(user)
+  $.post("/api/login", user).then(function (res) {
+    console.log(res);
+    window.location.pathname = "profile";
+  })
 })  

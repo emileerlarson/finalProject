@@ -86,6 +86,19 @@ module.exports = function(app) {
   });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////////////
 //ryan's crazy stuff
    app.post("/api/login", function (req, res) {
@@ -98,7 +111,7 @@ module.exports = function(app) {
     //using our users model to query our MySQL database for user info where ther username equals the username we passed in from the front end
     db.users.findOne({
       where: {
-        username: req.body.username
+        email: req.body.email
       }
     })
       .then(function (dbData) {
@@ -123,17 +136,16 @@ module.exports = function(app) {
               var userObj = {
                 id: dbData.dataValues.id,
                 name: dbData.dataValues.name,
-                username: dbData.dataValues.username,
                 email: dbData.dataValues.email,
                 picture: dbData.dataValues.picture
               }
+              //here the session's user object is updated with the users data. we can hit our /session endpoing witha  get request from the front end and get our user object.
+                req.session.user = userObj;
              //we update the loggedIn key to have a true value. we can use this value on the fron end to see if the user is logged in or not.
               req.session.user.loggedIn = true;
-            //here the session's user object is updated with the users data. we can hit our /session endpoing witha  get request from the front end and get our user object.
-              req.session.user = userObj;
               
               console.log(dbData.dataValues)
-              res.status(200).send('Successful login')
+              res.json(req.session.user)
             }
           });
         }
@@ -141,7 +153,7 @@ module.exports = function(app) {
   })
 
 // signin enpoint logic
-  app.post("/api/signUp", function (req, res, next) {
+  app.post("/api/signUp", function (req, res) {
     console.log(req.body)
     //to store a hased password into the database we need to first salt our password. this will tell bcrypt how many time to pass through the users password to generate the hash
     bcrypt.genSalt(10, function (err, salt) {
@@ -153,7 +165,6 @@ module.exports = function(app) {
             var userObj = {
               id: dbData.dataValues.id,
               name: dbData.dataValues.name,
-              username: dbData.dataValues.username,
               email: dbData.dataValues.email,
               picture: dbData.dataValues.picture
             }
