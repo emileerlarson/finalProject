@@ -23,7 +23,15 @@ module.exports = function(app) {
   });
 
   // profile route loads profile.html to create and update their profile information
-  app.get("/profile/:id", function(req, res) {
+
+  //uncomment the below
+
+  // app.get("/profile/:id", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/profile.html"));
+  // }); 
+  
+  //below is for testing
+  app.get("/profile", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/profile.html"));
   }); 
 
